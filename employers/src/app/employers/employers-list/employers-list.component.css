@@ -4,10 +4,17 @@ table, th, td {
     text-align: left;
   }
 
-  th {
+th {
     background-color: #4CAF50;
     color: white;
-  }
-  tr:hover {
+}
+th:hover {
+    background-color: #521616cb;
+}
+tr:hover {
       background-color: #968d8dcb;
-    }
+}
+
+input{
+      margin: 3px;
+}

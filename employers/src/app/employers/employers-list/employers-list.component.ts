@@ -10,6 +10,13 @@ export class EmployersListComponent implements OnInit {
   displayList: any;
   page = 1
   rows = 10 
+
+  id : string;
+  name : string;
+  age : string;
+  salary : string;
+
+  filter : string;
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
@@ -61,5 +68,20 @@ export class EmployersListComponent implements OnInit {
     if (index !== -1) {
         this.displayList.data.splice(index, 1);
     } 
+ }
+
+ addItem(){
+  this.displayList.data.push({id : this.id ,employee_name : this.name, employee_salary : this.salary, employee_age : this.age})
+ }
+
+ filterByName($event){
+   debugger
+   if($event != ''){
+  this.displayList.data = this.displayList.data.filter(element => {
+    return element.employee_name.includes($event);
+  });
+  }else{
+    this.getEmployersList();
+  }
  }
 }

@@ -1,4 +1,21 @@
+<div>
+    <label for="id">Id :</label>
+    <input id="id" type="text" [(ngModel)]="id">
+    <label for="name">name :</label>
+    <input id="name" type="text" [(ngModel)]="name">
+    <label for="age">age :</label>
+    <input id="age" type="text" [(ngModel)]="age">
+    <label for="salary">salary :</label>
+    <input id="salary" type="text" [(ngModel)]="salary">
+    <button (click)="addItem()">Add new emplyee</button>
+
+</div>
+<div>
+    <label for="filter">filter :</label>
+    <input id="filter" type="text" [(ngModel)]="filter"  (ngModelChange)="filterByName($event)">
+</div>
 <div style="overflow-x:auto;" >
+    
     <table>
         <thead>
             <tr>
