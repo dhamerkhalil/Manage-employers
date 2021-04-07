@@ -15,8 +15,8 @@ export class EmployersListComponent implements OnInit {
   name : string;
   age : string;
   salary : string;
+  filter: string;
 
-  filter : string;
   constructor(private httpClient : HttpClient) { }
 
   ngOnInit(): void {
@@ -74,11 +74,10 @@ export class EmployersListComponent implements OnInit {
   this.displayList.data.push({id : this.id ,employee_name : this.name, employee_salary : this.salary, employee_age : this.age})
  }
 
- filterByName($event){
-   debugger
-   if($event != ''){
+ filterByName(){
+   if(this.filter != ''){
   this.displayList.data = this.displayList.data.filter(element => {
-    return element.employee_name.includes($event);
+    return element.employee_name.includes(this.filter);
   });
   }else{
     this.getEmployersList();

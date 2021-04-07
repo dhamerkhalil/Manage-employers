@@ -4,10 +4,6 @@ import { EmployersListComponent } from './employers-list/employers-list.componen
 
 const routes: Routes = [
   {
-    path: "employes/list",
-    component: EmployersListComponent
-  },
-  {
     path: '',
     component: EmployersListComponent
   }
