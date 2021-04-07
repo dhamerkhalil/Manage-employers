@@ -2,7 +2,7 @@
 
 ##step 1 : execute
 
-nmp install
+npm install
 
 ##step 1 : execute
 
